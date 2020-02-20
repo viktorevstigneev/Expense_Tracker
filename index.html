@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Document</title>
+</head>
+<body>
+  <main>
+    <section class="Expense">
+      <h1 class="Expense__title">
+        Expense Tracker
+      </h1>
+      <h3 class="Expense__subtitle" >
+        YOUR BALANCE
+      </h3>
+      <h1 class="Expense__caption"  id="balance">
+       $0.00
+      </h1>
+      <div class="Expense__table">
+        <div class="">
+          <h4>Income</h4>
+          <p class="Expense__plus" id="plusik">
+            $0.00
+          </p>
+        </div>
+        <div class="">
+          <h4>Expense</h4>
+          <p class="Expense__minus" id="minusik">
+            $0.00
+          </p>
+        </div>
+      </div>
+      <h3 class="Expense__history">
+        History
+      </h3>
+      <hr>
+
+      <ul id="list" class="list">
+        <li class="plus">
+          fgfgfg <span>+564</span> 
+          <button class="delete-btn" onclick="removeTransaction(17631759)">
+            x
+          </button>
+        </li>
+        <li class="minus">
+          ftyryr <span>-200</span> 
+          <button class="delete-btn" onclick="removeTransaction(17631759)">
+            x
+          </button>
+        </li>
+      </ul>
+
+      <h3 class="Expense__transaction">
+        Add new transaction
+      </h3>
+      <hr>
+      <label for="text">Text</label>
+      <input class="Text" type="text" id="text" placeholder="Enter text...">
+      <label for="amount">Amount <br>
+        (negative - expense, positive - income)
+      </label>
+      <input class="Number" type="number" id="amount" placeholder="Enter amount...">
+
+      <button id="btn" class="btn">Add transaction</button>
+
+
+
+    </section>
+  </main>
+  <script src="js/main.js"></script>
+</body>
+</html>

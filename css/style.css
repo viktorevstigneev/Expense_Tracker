@@ -1,0 +1,80 @@
+body{
+  background-color: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+.Expense{
+  width: 350px;
+
+  margin: 0 auto;
+
+}
+.Expense__title{
+  text-align: center;
+}
+.Expense__subtitle{
+  margin-left: 10px;
+}
+.Expense__caption{
+  font-size: 36px;
+  margin-left: 10px;
+}
+.Expense__table{
+
+  background-color: #fff;
+  box-shadow: 10px 5px 5px red;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+
+.Expense__minus{
+color:red
+}
+
+.Expense__plus{
+color:green
+}
+.Text{
+  order: 1px solid #dedede;
+  border-radius: 2px;
+  display: block;
+  font-size: 16px;
+  padding: 10px;
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+}
+.Number{
+  border: 1px solid #dedede;
+  margin-top: 20px;
+    border-radius: 2px;
+    display: block;
+    font-size: 16px;
+    padding: 10px;
+    width: 350px;
+    padding-left: 0;
+  padding-right: 0
+}
+.btn{
+  cursor: pointer;
+    background-color: #9c88ff;
+    box-shadow: var(--box-shadow);
+    color: #fff;
+    border: 0;
+    display: block;
+    font-size: 16px;
+    margin: 10px 0 30px;
+    padding: 10px;
+    width: 350px;
+}
+/* input */
+/*  */
+    /* <button class="delete-btn" onclick="removeTransaction(17631759)">x</button> */
