@@ -15,41 +15,33 @@
       <h3 class="Expense__subtitle" >
         YOUR BALANCE
       </h3>
-      <h1 class="Expense__caption"  id="balance">
+      <h1 class="Expense__caption" >
        $0.00
       </h1>
       <div class="Expense__table">
-        <div class="">
+
+        <div class="Income">
           <h4>Income</h4>
-          <p class="Expense__plus" id="plusik">
+          <h1 class="Expense__plus">
             $0.00
-          </p>
+          </h1>
         </div>
-        <div class="">
+
+        <div class="consumption">
           <h4>Expense</h4>
-          <p class="Expense__minus" id="minusik">
+          <h1 class="Expense__minus">
             $0.00
-          </p>
+          </h1>
         </div>
+
       </div>
       <h3 class="Expense__history">
         History
       </h3>
       <hr>
-
-      <ul id="list" class="list">
-        <li class="plus">
-          fgfgfg <span>+564</span> 
-          <button class="delete-btn" onclick="removeTransaction(17631759)">
-            x
-          </button>
-        </li>
-        <li class="minus">
-          ftyryr <span>-200</span> 
-          <button class="delete-btn" onclick="removeTransaction(17631759)">
-            x
-          </button>
-        </li>
+<hr>
+      <ul class="Expence__list">
+        
       </ul>
 
       <h3 class="Expense__transaction">
@@ -57,16 +49,12 @@
       </h3>
       <hr>
       <label for="text">Text</label>
-      <input class="Text" type="text" id="text" placeholder="Enter text...">
+      <input class="Text" type="text"  placeholder="Enter text...">
       <label for="amount">Amount <br>
         (negative - expense, positive - income)
       </label>
-      <input class="Number" type="number" id="amount" placeholder="Enter amount...">
-
-      <button id="btn" class="btn">Add transaction</button>
-
-
-
+      <input class="Number" type="number"  placeholder="Enter amount...">
+      <button class="Expence__button">Add transaction</button>
     </section>
   </main>
   <script src="js/main.js"></script>

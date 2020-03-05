@@ -63,7 +63,7 @@ color:green
     padding-left: 0;
   padding-right: 0
 }
-.btn{
+.Expence__button{
   cursor: pointer;
     background-color: #9c88ff;
     box-shadow: var(--box-shadow);
@@ -75,6 +75,29 @@ color:green
     padding: 10px;
     width: 350px;
 }
-/* input */
-/*  */
-    /* <button class="delete-btn" onclick="removeTransaction(17631759)">x</button> */
+.Expence__list{
+  list-style: none;
+}
+
+/* .plus{
+  background-color: #fff;
+    box-shadow: var(--box-shadow);
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 10px;
+    margin: 10px 0;
+  border-right: 5px solid #2ecc71;
+}
+.minus{
+  background-color: #fff;
+    box-shadow: var(--box-shadow);
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 10px;
+    margin: 10px 0;
+  border-right: 5px solid #da1616;
+} */
