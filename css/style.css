@@ -8,23 +8,23 @@ body{
     margin: 0;
     font-family: 'Lato', sans-serif;
 }
-.Expense{
+.expense{
   width: 350px;
 
   margin: 0 auto;
 
 }
-.Expense__title{
+.expense__title{
   text-align: center;
 }
-.Expense__subtitle{
+.expense__subtitle{
   margin-left: 10px;
 }
-.Expense__caption{
+.expense__caption{
   font-size: 36px;
   margin-left: 10px;
 }
-.Expense__table{
+.expense__table{
 
   background-color: #fff;
   box-shadow: 10px 5px 5px red;
@@ -35,14 +35,16 @@ body{
 }
 
 
-.Expense__minus{
+.expense__minus{
 color:red
 }
-
-.Expense__plus{
+.expense__subtitle{
+  text-transform: uppercase;
+}
+.expense__plus{
 color:green
 }
-.Text{
+.text{
   order: 1px solid #dedede;
   border-radius: 2px;
   display: block;
@@ -52,7 +54,7 @@ color:green
   padding-right: 0;
   width: 100%;
 }
-.Number{
+.number{
   border: 1px solid #dedede;
   margin-top: 20px;
     border-radius: 2px;
@@ -63,7 +65,7 @@ color:green
     padding-left: 0;
   padding-right: 0
 }
-.Expence__button{
+.expence__button{
   cursor: pointer;
     background-color: #9c88ff;
     box-shadow: var(--box-shadow);
@@ -75,7 +77,7 @@ color:green
     padding: 10px;
     width: 350px;
 }
-.Expence__list{
+.expence__list{
   list-style: none;
 }
 

@@ -8,53 +8,52 @@
 </head>
 <body>
   <main>
-    <section class="Expense">
-      <h1 class="Expense__title">
+    <section class="expense">
+      <h2 class="expense__title">
         Expense Tracker
-      </h1>
-      <h3 class="Expense__subtitle" >
-        YOUR BALANCE
+      </h2>
+      <h3 class="expense__subtitle" >
+       your balance
       </h3>
-      <h1 class="Expense__caption" >
+      <h2 class="expense__caption" >
        $0.00
-      </h1>
-      <div class="Expense__table">
+      </h2>
+      <div class="expense__table">
 
-        <div class="Income">
+        <div class="income">
           <h4>Income</h4>
-          <h1 class="Expense__plus">
+          <h1 class="expense__plus">
             $0.00
           </h1>
         </div>
 
         <div class="consumption">
           <h4>Expense</h4>
-          <h1 class="Expense__minus">
+          <h1 class="expense__minus">
             $0.00
           </h1>
         </div>
 
       </div>
-      <h3 class="Expense__history">
+      <h3 class="expense__history">
         History
       </h3>
       <hr>
-<hr>
-      <ul class="Expence__list">
+      <ul class="expence__list">
         
       </ul>
 
-      <h3 class="Expense__transaction">
+      <h3 class="expense__transaction">
         Add new transaction
       </h3>
       <hr>
-      <label for="text">Text</label>
-      <input class="Text" type="text"  placeholder="Enter text...">
-      <label for="amount">Amount <br>
+      <label for="text" > Text </label>
+      <input id="text" class="text" type="text"  placeholder="Enter text...">
+      <label for="amount" > Amount <br>
         (negative - expense, positive - income)
       </label>
-      <input class="Number" type="number"  placeholder="Enter amount...">
-      <button class="Expence__button">Add transaction</button>
+      <input id="amount" class="number" type="number"  placeholder="Enter amount...">
+      <button class="expence__button">Add transaction</button>
     </section>
   </main>
   <script src="js/main.js"></script>

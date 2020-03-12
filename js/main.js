@@ -1,63 +1,63 @@
 'use strict ';
-  const balance = document.querySelector('.Expense__caption');
-  const minus = document.querySelector('.Expense__minus');
-  const plus = document.querySelector('.Expense__plus');
-  const list = document.querySelector('.Expence__list');
-  const text = document.querySelector('.Text');
-  const number = document.querySelector('.Number');
-  const submit = document.querySelector('.Expence__button');
+  const balanceElement = document.querySelector('.expense__caption');
+  const minusElement = document.querySelector('.expense__minus');
+  const plusElement = document.querySelector('.expense__plus');
+  const listElement = document.querySelector('.expence__list');
+  const textElement = document.querySelector('.text');
+  const numberElement = document.querySelector('.number');
+  const submitButton = document.querySelector('.expence__button');
 
   let transactions = [];
-  let score = 0;
-  let item;
-  let i = 0;
+  let item = {};
+  let balance = 0;
  
-
-const UpdateValues = ()=> {
-  transactions.forEach(function(item) {
-    score += item.amount;
-  });
-  balance.innerHTML = "$" + score;
-  score = 0;
-}
+   updateValues = () => {
+    transactions.forEach(function(item) {
+      balance += item.amount;
+     });
+    balanceElement.textContent = "$" + balance;
+    balance = 0;
+  }
  
- const AddTransaction =()=>{
-  item={
-    index: i++,
-    record: text.value,
-    amount: Number(number.value)
-  };
+  addTransaction = () => {
+   item={
+    index: Math.random(),
+    record: textElement.value,
+    amount: +numberElement.value
+   };
   transactions.push(item);
  }
 
-  const AddTransactionToDOM = () => {
-    let li = document.createElement('li');
-    li.innerHTML =`
-      <button class="delete-btn" onclick="RemoveTransaction(${item.index})">
-       x
-      </button>
-      ${item.record}
-      <span>${item.amount}</span> 
-    `;    
-    list.appendChild(li);
-    console.log('li: ', li);
+   addTransactionToDOM = () => {
+    const liElemnt = document.createElement('li');
+    const deleteButtonElement = document.createElement('button');
+    deleteButtonElement.className ='delete_btn';
+    deleteButtonElement.textContent ='x';
+    deleteButtonElement.setAttribute('onclick',`removeTransaction(${item.index})`);
+    console.log('item.index: ', item.index);
+    const spanElement = document.createElement('span');
+    spanElement.textContent = item.record + ' ' + item.amount;
+    liElemnt.appendChild(deleteButtonElement);
+    liElemnt.appendChild(spanElement);
+    listElement.appendChild(liElemnt);
+   
   }
 
-  function RemoveTransaction (index) {
+   removeTransaction = (index) => {
     transactions = transactions.filter( item =>  item.index !== index  ); 
-    UpdateValues();
+    updateValues();
   }
   
-  submit.addEventListener('click', () => {
-   if( text.value === "" || number.value === "" ){
+  submitButton.addEventListener('click', () => {
+   if( textElement.value === "" || numberElement.value === "" ){
      alert( "value is empty" );
    }
    else{
-    AddTransaction();
-    AddTransactionToDOM();
-    UpdateValues();
-    text.value = "";
-    number.value = "";
+    addTransaction();
+    addTransactionToDOM();
+    updateValues();
+    textElement.value = "";
+    numberElement.value = "";
    }
 
    });
