@@ -1,53 +1,65 @@
-'use strict ';
-  const balanceElement = document.querySelector('.expense__caption');
-  const minusElement = document.querySelector('.expense__minus');
-  const plusElement = document.querySelector('.expense__plus');
-  const listElement = document.querySelector('.expence__list');
+  'use strict';
+
+  const currentBalanceElement = document.querySelector('.expense__caption');
+  const currentExpenselement = document.querySelector('.expense__minus');
+  const currentIncomeElement = document.querySelector('.expense__plus');
+  const expenseListElement = document.querySelector('.expence__list');
   const textElement = document.querySelector('.text');
   const numberElement = document.querySelector('.number');
   const submitButton = document.querySelector('.expence__button');
+  const deleteButton = document.querySelectorAll('.delete_btn');
 
   let transactions = [];
   let item = {};
-  let balance = 0;
+  let income = 0;
+  let expense = 0;
+
  
-   updateValues = () => {
-    transactions.forEach(function(item) {
+  const updateValues = () => {
+    let balance = 0;
+    transactions.forEach((item) => {
       balance += item.amount;
      });
-    balanceElement.textContent = "$" + balance;
+     currentBalanceElement.textContent = "$" + balance;
     balance = 0;
   }
  
-  addTransaction = () => {
+  const addTransaction = () => {
    item={
     index: Math.random(),
     record: textElement.value,
     amount: +numberElement.value
    };
-  transactions.push(item);
- }
+    transactions.push(item);
+  }
 
-   addTransactionToDOM = () => {
-    const liElemnt = document.createElement('li');
-    const deleteButtonElement = document.createElement('button');
+ const  addTransactionToDOM = () => {
+    const liElement = document.createElement('li');
+    liElement.className='lielement';
+    var deleteButtonElement = document.createElement('button');
     deleteButtonElement.className ='delete_btn';
     deleteButtonElement.textContent ='x';
     deleteButtonElement.setAttribute('onclick',`removeTransaction(${item.index})`);
-    console.log('item.index: ', item.index);
     const spanElement = document.createElement('span');
     spanElement.textContent = item.record + ' ' + item.amount;
-    liElemnt.appendChild(deleteButtonElement);
-    liElemnt.appendChild(spanElement);
-    listElement.appendChild(liElemnt);
+    liElement.appendChild(deleteButtonElement);
+    liElement.appendChild(spanElement);
+    expenseListElement.appendChild(liElement);
    
   }
 
-   removeTransaction = (index) => {
-    transactions = transactions.filter( item =>  item.index !== index  ); 
+  const removeTransaction = (index) => {
+    const selectedLi=document.querySelector('.lielement');
+    transactions = transactions.filter( item => item.index !== index  ); 
     updateValues();
+    selectedLi.remove();
   }
   
+  deleteButton.forEach((button)=>{
+    button.addEventListener('click',removeTransaction(item.index));
+  });
+ 
+
   submitButton.addEventListener('click', () => {
    if( textElement.value === "" || numberElement.value === "" ){
      alert( "value is empty" );
